@@ -39,3 +39,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// its a random generator, i must add random aspect and change user characters
+//  to promps asking if they want a certain criteria 
