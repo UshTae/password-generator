@@ -1,13 +1,6 @@
 // This creates a var called generateBtn targeted at #generate under card-footer 
 var generateBtn = document.querySelector("#generate");
 
-// creates a range of numbers
-
-
-// var options = rangeArray;
-
-
-
 // creates a function called writePassword
 function writePassword() {
 
@@ -28,6 +21,9 @@ function writePassword() {
         if (userCharacters.length != userLength) {
           alert("Length must be " + userLength + " characters long")
         }
+        else {
+          alert("your secure password is " + userCharacters ) 
+        }
       }
     
      }
@@ -35,10 +31,10 @@ function writePassword() {
 
 
   // this displays the generated password 
-   
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-  var password = generatePassword();
+  
 }
 
 // Add event listener to generate button
