@@ -23,22 +23,22 @@ function writePassword() {
         alert("The length must be between 8-128")
       }
       else {
-        var userCharacters = window.prompt("Insert password");
+        var userCharacters = window.prompt("Insert password. Length must be " + userLength + " characters long." );
 
-        if (userCharacters.length = userLength) {
-          
+        if (userCharacters.length != userLength) {
+          alert("Length must be " + userLength + " characters long")
         }
       }
     
-      }
+     }
       
 
 
   // this displays the generated password 
-  var password = generatePassword(); 
+   
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
+  var password = generatePassword();
 }
 
 // Add event listener to generate button
