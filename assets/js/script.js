@@ -1,15 +1,38 @@
 // This creates a var called generateBtn targeted at #generate under card-footer 
 var generateBtn = document.querySelector("#generate");
 
+// creates a range of numbers
+const rangeArray = []
+
+for (let i = 8; i <= 128; i++){
+    rangeArray.push(i)
+}
+
+console.log(rangeArray);
+// var options = rangeArray;
+
 // creates a function called writePassword
 function writePassword() {
-  // this creates a variable called password thats linked to a function
-  // called generate password 
-  var password = generatePassword();
-  // creates a variable called passwordText targeted at #password under card body 
-  var passwordText = document.querySelector("#password");
 
-  // value of passwordText is password, therefore the new password is displayed  
+  // this is the function in which all the alert prompts and user input occurs 
+  function generatePassword() {
+    // ask for password length 
+      var userLength = window.prompt("Insert password length (8-128)")
+
+      if (userLength = rangeArray) {
+
+        var userCharacters = window.prompt("Insert password")
+      }
+      // else {
+
+      // }
+
+  }
+
+
+// this displays the generated password 
+  var password = generatePassword(); 
+  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
 }
