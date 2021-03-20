@@ -21,9 +21,14 @@ generateBtn.addEventListener("click", writePassword);
 
 // creates a function called writePassword
 function writePassword() {
-
   // this is the function in which all the alert prompts and user input occurs 
-  function generatePassword() {}
+  function generatePassword() {
+    var length = lengthEl.value;
+
+  }
+
+
+
   // this displays the generated password 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
