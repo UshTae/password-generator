@@ -20,15 +20,21 @@ generateBtn.addEventListener("click", writePassword);
 
   // captital random generation
 function getrandomUpper() {
-  // this will return a random string from built in character code chart using given criteria
+  // this will return a random string from built in character code chart within given criteria
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
-// logs the output 
-console.log(getrandomUpper());
 
   // lowercase random generation 
-
+function getRandomLower() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
 
   // numeric 
 
   // special characters 
+  
+  
+  
+  
+  // logs the output 
+console.log(getRandomLower());
