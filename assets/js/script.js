@@ -36,10 +36,11 @@ function getRandomNumber() {
 
   // special characters 
 function getRandomSpecial() {
-  return String.fromCharCode(Math.floor(Math.random() * 15) + );
+  const special = '~!@#$%^&*(){}[]=<>/,.:;';
+  return special[Math.floor(Math.random()* special.length)];
 }
   
   
   
   // logs the output 
-console.log(getRandomNumber());
+console.log(getRandomSpecial());
