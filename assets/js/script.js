@@ -30,6 +30,9 @@ function getRandomLower() {
 }
 
   // numeric 
+function getRandomNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 9) + 48);
+}
 
   // special characters 
   
@@ -37,4 +40,4 @@ function getRandomLower() {
   
   
   // logs the output 
-console.log(getRandomLower());
+console.log(getRandomNumber());
