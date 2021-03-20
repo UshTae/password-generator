@@ -1,6 +1,23 @@
+// Dom elements 
+var resultEl = document.getElementById('password');
+var lengthEl = document.getElementById('length');
+var uppercaseEl = document.getElementById('uppercase');
+var lowercaseEl = document.getElementById('lowercase');
+var numbersEl = document.getElementById('numbers');
+var specialsEl = document.getElementById('specials');
+var generateBtn = document.getElementById('generate');
 
-// This creates a var called generateBtn targeted at #generate under card-footer 
-var generateBtn = document.querySelector("#generate");
+// variable with all functions defined as properties 
+var randomFunction = {
+  lower: getRandomLower,
+  upper: getrandomUpper,
+  number: getRandomNumber,
+  special: getRandomSpecial
+};
+
+
+//When button is pressed, an event will happen
+generateBtn.addEventListener("click", writePassword);
 
 // creates a function called writePassword
 function writePassword() {
@@ -13,8 +30,6 @@ function writePassword() {
   passwordText.value = password;
   
 }
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 // creating four different functions to give random outputs of each criteria 
 
@@ -39,8 +54,3 @@ function getRandomSpecial() {
   const special = '~!@#$%^&*(){}[]=<>/,.:;';
   return special[Math.floor(Math.random()* special.length)];
 }
-  
-  
-  
-  // logs the output 
-console.log(getRandomSpecial());
