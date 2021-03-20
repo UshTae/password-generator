@@ -54,6 +54,14 @@ header {
   min-height: 100px;
 }
 
+.setting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 200px;
+}
+
+
 .card-footer {
   text-align: center;
 }
