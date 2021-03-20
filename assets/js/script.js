@@ -31,11 +31,13 @@ function getRandomLower() {
 
   // numeric 
 function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 9) + 48);
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
   // special characters 
-  
+function getRandomSpecial() {
+  return String.fromCharCode(Math.floor(Math.random() * 15) + );
+}
   
   
   
