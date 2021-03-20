@@ -24,9 +24,13 @@ function writePassword() {
   // this is the function in which all the alert prompts and user input occurs 
   function generatePassword() {
     var length = +lengthEl.value;
+    var hasLower = lowercaseEl.checked;
+    var hasUpper = uppercaseEl.checked;
+    var hasNumber = numbersEl.checked;
+    var hasSymbol = specialsEl.checked;
 
-      console.log(typeof length);
-  }
+      console.log( length, hasLower, hasUpper, hasNumber, hasSymbol);
+  };
 
 
 
