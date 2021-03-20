@@ -21,24 +21,16 @@ generateBtn.addEventListener("click", writePassword);
 
 // creates a function called writePassword
 function writePassword() {
+  
   // this is the function in which all the alert prompts and user input occurs 
   function generatePassword() {
-    var length = +lengthEl.value;
-    var hasLower = lowercaseEl.checked;
-    var hasUpper = uppercaseEl.checked;
-    var hasNumber = numbersEl.checked;
-    var hasSymbol = specialsEl.checked;
-
-      console.log( length, hasLower, hasUpper, hasNumber, hasSymbol);
-  };
+    if (uppercaseEl.checked){
+      return getrandomUpper();
+    }
+   console.log
+}
 
 
-
-  // this displays the generated password 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-  
 }
 
 // creating four different functions to give random outputs of each criteria 
@@ -61,6 +53,7 @@ function getRandomNumber() {
 
   // special characters 
 function getRandomSpecial() {
+
   const special = '~!@#$%^&*(){}[]=<>/,.:;';
   return special[Math.floor(Math.random()* special.length)];
 }
