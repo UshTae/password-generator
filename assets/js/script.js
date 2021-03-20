@@ -24,12 +24,16 @@ function writePassword() {
   
   // this is the function in which all the alert prompts and user input occurs 
   function generatePassword() {
-    if (uppercaseEl.checked){
-      return getrandomUpper();
-    }
-   console.log
+
+ 
+
+    
 }
 
+ // this displays the generated password 
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 
 }
 
@@ -57,3 +61,10 @@ function getRandomSpecial() {
   const special = '~!@#$%^&*(){}[]=<>/,.:;';
   return special[Math.floor(Math.random()* special.length)];
 }
+
+// variable with all the criteria functions 
+// make array from variable 
+// choose random from array 
+
+// if random is checked it is added to password
+// encase all of this in a loop thats restricted by user input 
