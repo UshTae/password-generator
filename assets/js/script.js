@@ -13,7 +13,13 @@ function writePassword() {
   passwordText.value = password;
   
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// lowercase random generation 
+
+// captital random generation 
+
+// numeric 
+
+// special characters 
