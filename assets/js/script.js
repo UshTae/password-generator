@@ -16,10 +16,19 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// lowercase random generation 
+// creating four different functions to give random outputs of each criteria 
 
-// captital random generation 
+  // captital random generation
+function getrandomUpper() {
+  // this will return a random string from built in character code chart using given criteria
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+// logs the output 
+console.log(getrandomUpper());
 
-// numeric 
+  // lowercase random generation 
 
-// special characters 
+
+  // numeric 
+
+  // special characters 
