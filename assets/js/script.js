@@ -12,8 +12,9 @@ var randomFunction = {
   lower: getRandomLower,
   upper: getrandomUpper,
   number: getRandomNumber,
-  special: getRandomSpecial
+  special: getRandomSpecial,
 };
+
 
 
 //When button is pressed, an event will happen
@@ -64,7 +65,28 @@ function getRandomSpecial() {
 
 // variable with all the criteria functions 
 // make array from variable 
-// choose random from array 
+// encase all of this in a loop thats restricted by user length input 
+  // choose random function from array 
+  // if function is 'checked' return it
+  // else next function 
+  // continues looping through them all until user length met 
 
-// if random is checked it is added to password
-// encase all of this in a loop thats restricted by user input 
+  for (var properties in randomFunction){
+    if (uppercaseEl.checked == true){
+      console.log("checked")
+    }else{
+      console.log("unchecked")
+    }
+
+    if (lowercaseEl.checked == true){
+      console.log("checked")
+    }else{
+      console.log("unchecked")
+    }
+
+    if (numbersEl.checked == true){
+      console.log("checked")
+    }else{
+      console.log("unchecked")
+    }
+  }
