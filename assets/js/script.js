@@ -38,31 +38,6 @@ function writePassword() {
 
 }
 
-// creating four different functions to give random outputs of each criteria 
-
-  // captital random generation
-function getrandomUpper() {
-  // this will return a random string from built in character code chart within given criteria
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-
-  // lowercase random generation 
-function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-
-  // numeric 
-function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-  // special characters 
-function getRandomSpecial() {
-
-  const special = '~!@#$%^&*(){}[]=<>/,.:;';
-  return special[Math.floor(Math.random()* special.length)];
-}
-
 // variable with all the criteria functions 
 // make array from variable 
 // encase all of this in a loop thats restricted by user length input 
@@ -73,19 +48,41 @@ function getRandomSpecial() {
 
   for (var properties in randomFunction){
     if (uppercaseEl.checked == true){
-      console.log("checked")
+      // captital random generation
+      function getrandomUpper() {
+        // this will return a random string from built in character code chart within given criteria
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+      }
     }else{
       console.log("unchecked")
     }
 
     if (lowercaseEl.checked == true){
-      console.log("checked")
+
+        // lowercase random generation 
+      function getRandomLower() {
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+      }
     }else{
       console.log("unchecked")
     }
 
     if (numbersEl.checked == true){
-      console.log("checked")
+      // numeric 
+      function getRandomNumber() {
+        return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+      }
+    }else{
+      console.log("unchecked")
+    }
+
+    if (specialsEl.checked == true){
+      // special characters 
+      function getRandomSpecial() {
+
+        const special = '~!@#$%^&*(){}[]=<>/,.:;';
+        return special[Math.floor(Math.random()* special.length)];
+      }
     }else{
       console.log("unchecked")
     }
