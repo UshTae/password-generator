@@ -25,12 +25,49 @@ function writePassword() {
   
   // this is the function in which all the alert prompts and user input occurs 
   function generatePassword() {
-
- 
-
     
-}
-
+    for (var properties in randomFunction){
+      if (uppercaseEl.checked == true){
+        // captital random generation
+        function getrandomUpper() {
+          // this will return a random string from built in character code chart within given criteria
+          return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+        }
+      }else{
+        console.log("unchecked")
+      }
+  
+      if (lowercaseEl.checked == true){
+  
+          // lowercase random generation 
+        function getRandomLower() {
+          return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+        }
+      }else{
+        console.log("unchecked")
+      }
+  
+      if (numbersEl.checked == true){
+        // numeric 
+        function getRandomNumber() {
+          return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+        }
+      }else{
+        console.log("unchecked")
+      }
+  
+      if (specialsEl.checked == true){
+        // special characters 
+        function getRandomSpecial() {
+  
+          const special = '~!@#$%^&*(){}[]=<>/,.:;';
+          return special[Math.floor(Math.random()* special.length)];
+        }
+      }else{
+        console.log("unchecked")
+      }
+    }
+  }   
  // this displays the generated password 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -46,44 +83,4 @@ function writePassword() {
   // else next function 
   // continues looping through them all until user length met 
 
-  for (var properties in randomFunction){
-    if (uppercaseEl.checked == true){
-      // captital random generation
-      function getrandomUpper() {
-        // this will return a random string from built in character code chart within given criteria
-        return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-      }
-    }else{
-      console.log("unchecked")
-    }
-
-    if (lowercaseEl.checked == true){
-
-        // lowercase random generation 
-      function getRandomLower() {
-        return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-      }
-    }else{
-      console.log("unchecked")
-    }
-
-    if (numbersEl.checked == true){
-      // numeric 
-      function getRandomNumber() {
-        return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-      }
-    }else{
-      console.log("unchecked")
-    }
-
-    if (specialsEl.checked == true){
-      // special characters 
-      function getRandomSpecial() {
-
-        const special = '~!@#$%^&*(){}[]=<>/,.:;';
-        return special[Math.floor(Math.random()* special.length)];
-      }
-    }else{
-      console.log("unchecked")
-    }
-  }
+  
