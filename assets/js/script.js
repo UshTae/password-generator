@@ -9,13 +9,65 @@ var generateBtn = document.getElementById('generate');
 
 // variable with all functions defined as properties 
 var randomFunction = {
-  lower: getRandomLower,
   upper: getrandomUpper,
+  lower: getRandomLower,
   number: getRandomNumber,
   special: getRandomSpecial,
 };
 
-// functions to get each character type 
+//When button is pressed, an event will happen
+generateBtn.addEventListener("click", generatePassword);
+  
+// this is the function in which all the alert prompts and user input occurs 
+function generatePassword(upper, lower, number, special, length) {
+  
+  for(var i=0; i < 1; i++){
+    if (uppercaseEl.checked == true){
+        // captital random generation
+      console.log()
+    }else{
+      console.log("unchecked")
+    }
+  
+    if (lowercaseEl.checked == true){
+  
+      // lowercase random generation 
+       
+  }else{
+      console.log("unchecked")
+    }
+  
+     if (numbersEl.checked == true){
+      // numeric 
+       
+    }else{
+     console.log("unchecked")
+    }
+  
+    if (specialsEl.checked == true){
+       // special characters 
+       
+    }else{
+     console.log("unchecked")
+    }
+  }
+}   
+ // this displays the generated password 
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+
+
+
+// variable with all the criteria functions 
+// make array from variable 
+// encase all of this in a loop thats restricted by user length input 
+  // choose random function from array 
+  // if function is 'checked' return it
+  // else next function 
+  // continues looping through them all until user length met 
+
+  // functions to get each character type 
 
 function getrandomUpper() {
   // this will return a random string from built in character code chart within given criteria
@@ -35,61 +87,3 @@ function getRandomSpecial() {
   const special = '~!@#$%^&*(){}[]=<>/,.:;';
   return special[Math.floor(Math.random()* special.length)];
 }
-
-
-//When button is pressed, an event will happen
-generateBtn.addEventListener("click", writePassword);
-
-// creates a function called writePassword
-function writePassword() {
-  
-  // this is the function in which all the alert prompts and user input occurs 
-  function generatePassword() {
-    
-    for(var i=0; i < 1; i++){
-      if (uppercaseEl.checked == true){
-        // captital random generation
-       
-      }else{
-        console.log("unchecked")
-      }
-  
-      if (lowercaseEl.checked == true){
-  
-          // lowercase random generation 
-       
-      }else{
-        console.log("unchecked")
-      }
-  
-      if (numbersEl.checked == true){
-        // numeric 
-       
-      }else{
-        console.log("unchecked")
-      }
-  
-      if (specialsEl.checked == true){
-        // special characters 
-       
-      }else{
-        console.log("unchecked")
-      }
-    }
-  }   
- // this displays the generated password 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-
-}
-
-// variable with all the criteria functions 
-// make array from variable 
-// encase all of this in a loop thats restricted by user length input 
-  // choose random function from array 
-  // if function is 'checked' return it
-  // else next function 
-  // continues looping through them all until user length met 
-
-  
