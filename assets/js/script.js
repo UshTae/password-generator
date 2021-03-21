@@ -8,14 +8,12 @@ var specialsEl = document.getElementById('specials');
 var generateBtn = document.getElementById('generate');
 
 // variable with all functions defined as properties 
-
-
-
-
-
-
-
-
+var randomFunction = {
+  lower: getRandomLower,
+  upper: getrandomUpper,
+  number: getRandomNumber,
+  special: getRandomSpecial,
+};
 
 // functions to get each character type 
 
@@ -37,8 +35,6 @@ function getRandomSpecial() {
   const special = '~!@#$%^&*(){}[]=<>/,.:;';
   return special[Math.floor(Math.random()* special.length)];
 }
-
-
 
 
 //When button is pressed, an event will happen
