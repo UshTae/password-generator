@@ -8,12 +8,36 @@ var specialsEl = document.getElementById('specials');
 var generateBtn = document.getElementById('generate');
 
 // variable with all functions defined as properties 
-var randomFunction = {
-  lower: getRandomLower,
-  upper: getrandomUpper,
-  number: getRandomNumber,
-  special: getRandomSpecial,
-};
+
+
+
+
+
+
+
+
+
+// functions to get each character type 
+
+function getrandomUpper() {
+  // this will return a random string from built in character code chart within given criteria
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function getRandomLower() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+
+function getRandomNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+function getRandomSpecial() {
+  
+  const special = '~!@#$%^&*(){}[]=<>/,.:;';
+  return special[Math.floor(Math.random()* special.length)];
+}
+
 
 
 
@@ -26,13 +50,10 @@ function writePassword() {
   // this is the function in which all the alert prompts and user input occurs 
   function generatePassword() {
     
-    for (var properties in randomFunction){
+    for(var i=0; i < 1; i++){
       if (uppercaseEl.checked == true){
         // captital random generation
-        function getrandomUpper() {
-          // this will return a random string from built in character code chart within given criteria
-          return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-        }
+       
       }else{
         console.log("unchecked")
       }
@@ -40,29 +61,21 @@ function writePassword() {
       if (lowercaseEl.checked == true){
   
           // lowercase random generation 
-        function getRandomLower() {
-          return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-        }
+       
       }else{
         console.log("unchecked")
       }
   
       if (numbersEl.checked == true){
         // numeric 
-        function getRandomNumber() {
-          return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-        }
+       
       }else{
         console.log("unchecked")
       }
   
       if (specialsEl.checked == true){
         // special characters 
-        function getRandomSpecial() {
-  
-          const special = '~!@#$%^&*(){}[]=<>/,.:;';
-          return special[Math.floor(Math.random()* special.length)];
-        }
+       
       }else{
         console.log("unchecked")
       }
