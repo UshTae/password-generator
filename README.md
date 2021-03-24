@@ -22,4 +22,4 @@ The Employer wants to randomly generate a password that meets certain criteria, 
 The following image shows the apps's appearance and functionality.
 ![The website includes a password generation section and checkboxes with criteria.]()
 ## Application link
-Link to the Horison deployed website: 
+Link to the password generation website: https://subwayaintfresh.github.io/password-generator/
