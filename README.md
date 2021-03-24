@@ -20,6 +20,6 @@ The Employer wants to randomly generate a password that meets certain criteria, 
 
 ## Mock up
 The following image shows the apps's appearance and functionality.
-![The website includes a password generation section and checkboxes with criteria.]()
+![The website includes a password generation section and checkboxes with criteria.](https://github.com/subwayaintfresh/password-generator/blob/main/assets/2021-03-24-17-36-subwayaintfresh.github.io.png)
 ## Application link
 Link to the password generation website: https://subwayaintfresh.github.io/password-generator/
